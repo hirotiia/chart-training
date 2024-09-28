@@ -1,12 +1,15 @@
 {
   "extends": ["next/core-web-vitals", "next/typescript"],
-  "check-file/filename-naming-convention": [
-    "error",
-    {
-      "**/*.{ts,tsx}": "KEBAB_CASE"
-    },
-    {
-      "ignoreMiddleExtensions": true
-    }
-  ]
+  "plugins": ["check-file"],
+  "rules": {
+    "check-file/filename-naming-convention": [
+      "error",
+      {
+        "**/*.{ts,tsx}": "KEBAB_CASE"
+      },
+      {
+        "ignoreMiddleExtensions": true
+      }
+    ]
+  }
 }
