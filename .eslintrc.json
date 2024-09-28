@@ -10,6 +10,23 @@
       {
         "ignoreMiddleExtensions": true
       }
+    ],
+    "import/no-restricted-paths": [
+      "error",
+      {
+        "zones": [
+          {
+            "target": "./src/features/auth",
+            "from": "./src/features",
+            "except": ["./auth"]
+          },
+          {
+            "target": "./src/features/users",
+            "from": "./src/features",
+            "except": ["./users"]
+          }
+        ]
+      }
     ]
   }
 }
