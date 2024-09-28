@@ -24,6 +24,10 @@
             "target": "./src/features/users",
             "from": "./src/features",
             "except": ["./users"]
+          },
+          {
+            "target": "./src/features",
+            "from": "./src/app"
           }
         ]
       }
