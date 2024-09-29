@@ -1,6 +1,6 @@
 import { env } from '@/config/env';
 
-/** APIリクエストを行う単一のインスタンス */
+/** APIリクエストを行う単一のインスタンスを提供 */
 
 type RequestOptions = {
     method?: string;
@@ -12,6 +12,7 @@ type RequestOptions = {
     next?: NextFetchRequestConfig;
   };
   
+
   function buildUrlWithParams(
     url: string,
     params?: RequestOptions['params'],
@@ -29,6 +30,7 @@ type RequestOptions = {
     return `${url}?${queryString}`;
   }
   
+
   async function fetchApi<T>(
     url: string,
     options: RequestOptions = {},
@@ -43,7 +45,7 @@ type RequestOptions = {
       next,
     } = options;
     const fullUrl = buildUrlWithParams(`${env.API_URL}${url}`, params);
-  
+
     const response = await fetch(fullUrl, {
       method,
       headers: {
@@ -57,20 +59,20 @@ type RequestOptions = {
       cache,
       next,
     });
-  
+
     if (!response.ok) {
       const message = (await response.json()).message || response.statusText;
 
-      // クライアントサイドで実行されているかを確認。
+      /** クライアントサイドで実行されているかを確認。 */
       if (typeof window !== 'undefined') {
-        // コンポーネントを使用してエラーを通知
+        /** コンポーネントを使用してエラーを通知 */
       }
       throw new Error(message);
     }
-  
+
     return response.json();
   }
-  
+
   export const api = {
     get<T>(url: string, options?: RequestOptions): Promise<T> {
       return fetchApi<T>(url, { ...options, method: 'GET' });
