@@ -1,6 +1,6 @@
 import { env } from '@/config/env';
 
-/** APIリクエストを行うユーティリティ関数 */
+/** APIリクエストを行う単一のインスタンス */
 
 type RequestOptions = {
     method?: string;
