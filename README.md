@@ -162,6 +162,7 @@ src
 
 - [開発者向け情報](/developer.md)
 - [アプリケーションアーキテクチャ](/application-design.md)
+- [パフォーマンスを上げるための施策](/performance.md)
 
 
 
