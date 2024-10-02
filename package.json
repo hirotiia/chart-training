@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "secretlint": "secretlint --maskSecrets --secretlintignore .gitignore '**/*'",
     "check-types": "tsc --project tsconfig.json --pretty --noEmit"
   },
   "dependencies": {
@@ -15,6 +16,7 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "@secretlint/secretlint-rule-preset-recommend": "^8.2.4",
     "@types/node": "^22.7.4",
     "@types/react": "^18.3.10",
     "@types/react-dom": "^18.3.0",
@@ -22,8 +24,11 @@
     "eslint-config-next": "14.2.14",
     "eslint-plugin-check-file": "^2.8.0",
     "eslint-plugin-prettier": "^5.2.1",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
     "postcss": "^8.4.47",
     "prettier": "^3.3.3",
+    "secretlint": "^8.2.4",
     "tailwindcss": "^3.4.13",
     "typescript": "^5.6.2"
   }
