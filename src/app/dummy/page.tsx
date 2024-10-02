@@ -1,3 +1,3 @@
 export const functionName = () => {
-  return <h1>亜kjfけじfじゃ</h1>;
+  return <h1>dumy</h1>;
 };
