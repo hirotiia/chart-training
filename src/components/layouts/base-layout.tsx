@@ -53,18 +53,14 @@ export const BaseLayout = ({ children }: { children: React.ReactNode }) => {
           >
             <SquareMenu
               className={cn(
-                'absolute w-6 h-6 text-gray-800 transition-colors',
-                isOpen
-                  ? 'opacity-0 scale-50 rotate-45'
-                  : 'opacity-100 scale-100 rotate-0',
+                'absolute w-6 h-6 text-foregroundDark transition-transform',
+                isOpen ? 'opacity-0 rotate-45' : 'opacity-100 rotate-0',
               )}
             />
             <X
               className={cn(
-                'absolute w-6 h-6 text-gray-800 transition-colors',
-                isOpen
-                  ? 'opacity-100 scale-100 rotate-0'
-                  : 'opacity-0 scale-50 rotate-45',
+                'absolute w-6 h-6 text-foregroundDark transition-transform',
+                isOpen ? 'opacity-100 rotate-0' : 'opacity-0 rotate-45',
               )}
             />
             <span className="sr-only">ナビゲーションメニュー</span>
