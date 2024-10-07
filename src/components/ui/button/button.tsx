@@ -10,16 +10,16 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          'border-primary bg-primary text-primary-foreground hover:border hover:border-primary hover:bg-white hover:text-primary',
+          'border border-primary bg-primary text-primary-foreground hover:border hover:border-primary hover:bg-white hover:text-primary',
         secondary:
-          'border-secondary bg-secondary text-secondary-foreground hover:border hover:border-secondary hover:bg-white hover:text-secondary',
+          'border border-secondary bg-secondary text-secondary-foreground hover:border hover:border-secondary hover:bg-white hover:text-secondary',
         destructive:
-          'border-destructive bg-destructive text-destructive-foreground hover:border hover:border-destructive hover:bg-white hover:text-destructive',
+          'border border-destructive bg-destructive text-destructive-foreground hover:border hover:border-destructive hover:bg-white hover:text-destructive',
         muted:
-          'border-muted bg-muted text-muted-foreground hover:border hover:border-muted hover:bg-white hover:text-muted',
+          'border border-muted bg-muted text-muted-foreground hover:border hover:border-muted hover:bg-white hover:text-muted',
 
         accent:
-          'border-accent bg-accent text-accent-foreground hover:border hover:border-accent hover:bg-white hover:text-accent',
+          'border border-accent bg-accent text-accent-foreground hover:border hover:border-accent hover:bg-white hover:text-accent',
       },
       size: {
         default: 'h-9 px-4 py-2',
