@@ -8,10 +8,17 @@
   --border: #ffffff;
   --ring: #010816;
   --foreground: #ffffff;
-  --nav-forground: #222222;
+  --forground-dark: #383c88;
 
   /* Gradients */
-  --background: linear-gradient(0deg, #b886cf 0%, #7f67ae 32%, #383c88 100%);
+  --linear-gradient: linear-gradient(
+    0deg,
+    #383c88 0%,
+    #7f67ae 68%,
+    #b886cf 100%
+  );
+
+  --text-gradient: linear-gradient(90deg, #383c88 0%, #7f67ae 40%, #b886cf 80%);
 
   /* Theme Colors */
   --primary: #f183fa;
@@ -60,7 +67,7 @@ body {
 
   body {
     /* Body全体の背景色とテキストの色を適用 */
-    @apply bg-background text-foreground;
+    @apply bg-gradient-custom text-foreground;
   }
 }
 

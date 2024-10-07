@@ -22,9 +22,8 @@ const config: Config = {
       colors: {
         border: 'var(--border)',
         ring: 'var(--ring)', // フォーカスが当たっている要素の周り
-        background: 'var(--background)',
         foreground: 'var(--foreground)',
-        navForground: 'var(--nav-forground)',
+        foregroundDark: 'var(--forground-dark)',
         primary: {
           DEFAULT: 'var(--primary)',
           foreground: 'var(--primary-foreground)',
@@ -71,6 +70,13 @@ const config: Config = {
       animation: {
         accordionDown: 'accordionDown 0.3s ease-out',
         accordionUp: 'accordionUp 0.3s ease-out',
+      },
+      minHeight: {
+        'screen-dvh': '100dvh',
+      },
+      backgroundImage: {
+        'gradient-custom': 'var(--linear-gradient)',
+        'text-gradient': 'var(--text-gradient)',
       },
     },
   },

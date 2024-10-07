@@ -18,7 +18,9 @@ const Logo = () => {
         width="80"
         height="80"
       />
-      <span className="text-lg font-bold text-navForground">チャートレ</span>
+      <span className="bg-text-gradient bg-clip-text text-lg font-bold text-transparent">
+        チャートレ
+      </span>
     </Link>
   );
 };
@@ -36,9 +38,9 @@ export const BaseLayout = ({ children }: { children: React.ReactNode }) => {
   ].filter(Boolean);
 
   return (
-    <div className="">
+    <div className="grid min-h-screen-dvh grid-rows-[1fr_auto] gap-10">
       <header className="fixed top-0 mt-6 w-full">
-        <div className="mx-auto flex max-w-screen-xl justify-between rounded-full bg-white/50 px-8 py-3 shadow-lg backdrop-blur-glass">
+        <div className="mx-auto flex max-w-screen-xl justify-between rounded-full bg-white/70 px-8 py-3 shadow-lg backdrop-blur-glass">
           <div className="">
             <Logo />
           </div>
@@ -51,7 +53,7 @@ export const BaseLayout = ({ children }: { children: React.ReactNode }) => {
           >
             <SquareMenu
               className={cn(
-                'absolute w-6 h-6 text-gray-800 transition-all duration-300 ease-in-out transform',
+                'absolute w-6 h-6 text-gray-800 transition-colors',
                 isOpen
                   ? 'opacity-0 scale-50 rotate-45'
                   : 'opacity-100 scale-100 rotate-0',
@@ -59,7 +61,7 @@ export const BaseLayout = ({ children }: { children: React.ReactNode }) => {
             />
             <X
               className={cn(
-                'absolute w-6 h-6 text-gray-800 transition-all duration-300 ease-in-out transform',
+                'absolute w-6 h-6 text-gray-800 transition-colors',
                 isOpen
                   ? 'opacity-100 scale-100 rotate-0'
                   : 'opacity-0 scale-50 rotate-45',
@@ -76,7 +78,7 @@ export const BaseLayout = ({ children }: { children: React.ReactNode }) => {
                   <li className="" key={item.name}>
                     <Link
                       className={cn(
-                        'text-navForground font-bold hover:text-muted transition-colors',
+                        'text-foregroundDark font-bold hover:text-muted transition-colors',
                         isCurrent && 'text-muted',
                       )}
                       href={item.to}
@@ -91,6 +93,11 @@ export const BaseLayout = ({ children }: { children: React.ReactNode }) => {
         </div>
       </header>
       <main>{children}</main>
+      <footer>
+        <p className="text-right">
+          <small>© Hrioya Nakano 2024</small>
+        </p>
+      </footer>
     </div>
   );
 };
