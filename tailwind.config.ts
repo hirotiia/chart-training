@@ -23,7 +23,8 @@ const config: Config = {
         border: 'var(--border)',
         ring: 'var(--ring)', // フォーカスが当たっている要素の周り
         background: 'var(--background)',
-        foreground: 'var(--foreground)', // 文字
+        foreground: 'var(--foreground)',
+        navForground: 'var(--nav-forground)',
         primary: {
           DEFAULT: 'var(--primary)',
           foreground: 'var(--primary-foreground)',

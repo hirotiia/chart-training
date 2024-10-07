@@ -4,9 +4,7 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "ignorePatterns": [
-    "node_modules/*"
-  ],
+  "ignorePatterns": ["node_modules/*"],
   "extends": [
     "next/core-web-vitals",
     "next/typescript",
@@ -28,10 +26,7 @@
   },
   "overrides": [
     {
-      "files": [
-        "**/*.ts",
-        "**/*.tsx"
-      ],
+      "files": ["**/*.ts", "**/*.tsx"],
       "parser": "@typescript-eslint/parser",
       "extends": [
         "eslint:recommended",
@@ -53,16 +48,12 @@
               {
                 "target": "./src/features/auth",
                 "from": "./src/features",
-                "except": [
-                  "./auth"
-                ]
+                "except": ["./auth"]
               },
               {
                 "target": "./src/features/users",
                 "from": "./src/features",
-                "except": [
-                  "./users"
-                ]
+                "except": ["./users"]
               },
               {
                 "target": "./src/features",
@@ -76,19 +67,13 @@
                   "./src/types",
                   "./src/utils"
                 ],
-                "from": [
-                  "./src/features",
-                  "./src/app"
-                ]
+                "from": ["./src/features", "./src/app"]
               }
             ]
           }
         ],
         "import/no-cycle": "error",
-        "linebreak-style": [
-          "error",
-          "unix"
-        ],
+        "linebreak-style": ["error", "unix"],
         "react/prop-types": "off",
         "import/order": [
           "error",
@@ -122,12 +107,8 @@
       }
     },
     {
-      "plugins": [
-        "check-file"
-      ],
-      "files": [
-        "src/**/*"
-      ],
+      "plugins": ["check-file"],
+      "files": ["src/**/*"],
       "rules": {
         "check-file/filename-naming-convention": [
           "error",
@@ -141,8 +122,7 @@
         "check-file/folder-naming-convention": [
           "error",
           {
-            "src/**/": "KEBAB_CASE",
-            "src/app/**/": "NEXT_JS_APP_ROUTER_CASE"
+            "src/**/": "NEXT_JS_APP_ROUTER_CASE"
           }
         ]
       }

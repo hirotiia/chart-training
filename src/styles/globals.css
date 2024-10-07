@@ -8,6 +8,7 @@
   --border: #ffffff;
   --ring: #010816;
   --foreground: #ffffff;
+  --nav-forground: #222222;
 
   /* Gradients */
   --background: linear-gradient(0deg, #b886cf 0%, #7f67ae 32%, #383c88 100%);

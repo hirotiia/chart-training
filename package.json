@@ -9,12 +9,14 @@
     "lint": "next lint",
     "secretlint": "secretlint --maskSecrets --secretlintignore .gitignore '**/*'",
     "check-types": "tsc --project tsconfig.json --pretty --noEmit",
+    "clean-types": "git ls-files --deleted | grep '.next/types' | xargs rm",
     "prepare": "husky install",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.0",
+    "lucide-react": "^0.447.0",
     "next": "14.2.14",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
