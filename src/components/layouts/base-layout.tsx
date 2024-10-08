@@ -39,9 +39,9 @@ export const BaseLayout = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <div className="grid min-h-screen-dvh grid-cols-custom-layout gap-4">
-      <div className="col-span-3 grid grid-cols-custom-layout gap-custom-gap">
-        <div className="col-start-2 grid">
-          <header className="fixed left-0 top-0 mt-6 w-full">
+      <div className="relative col-span-3 grid grid-cols-custom-layout gap-custom-gap before:absolute before:inset-0 before:-z-10 before:size-full before:bg-gradient-custom">
+        <div className="relative col-start-2 grid h-full grid-rows-[1fr_auto]">
+          <header className="fixed left-0 mt-6 w-full">
             <div className="mx-auto flex max-w-screen-xl justify-between rounded-full bg-white/70 px-8 py-3 shadow-lg backdrop-blur-glass">
               <div className="">
                 <Logo />
@@ -91,7 +91,7 @@ export const BaseLayout = ({ children }: { children: React.ReactNode }) => {
             </div>
           </header>
           <main>{children}</main>
-          <footer>
+          <footer className="p-8">
             <p className="text-right">
               <small>© Hrioya Nakano 2024</small>
             </p>

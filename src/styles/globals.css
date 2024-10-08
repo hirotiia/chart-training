@@ -14,9 +14,17 @@
   --viewport-max: 1220px;
   --viewport-min: 330px;
 
+  /** margin */
+  --screen-margin-max: 2.5rem;
+  --screen-margin-min: 1rem;
+
   /** gap */
-  --screen-gap-max: 2.5rem;
-  --screen-gap-min: 1rem;
+  --screen-gap: 0
+    clamp(
+      var(--screen-margin-min),
+      0.591rem + 2.182vw,
+      var(--screen-margin-max)
+    );
 
   /* Gradients */
   --linear-gradient: linear-gradient(
@@ -69,13 +77,11 @@ body {
   }
 
   * {
-    /* すべての要素にボーダースタイルを適用 */
     @apply border-border;
   }
 
   body {
-    /* Body全体の背景色とテキストの色を適用 */
-    @apply bg-gradient-custom text-foreground;
+    @apply text-foreground;
   }
 }
 

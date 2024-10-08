@@ -86,8 +86,7 @@ const config: Config = {
           '1fr minmax(var(--viewport-min), var(--viewport-max)) 1fr',
       },
       gap: {
-        'custom-gap':
-          '0 clamp(var(--screen-gap-min), 0.591rem + 2.182vw, var(--screen-gap-max))',
+        'custom-gap': 'var(--screen-gap)',
       },
     },
   },
