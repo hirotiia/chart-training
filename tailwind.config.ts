@@ -2,7 +2,6 @@ import type { Config } from 'tailwindcss';
 import defaultTheme from 'tailwindcss/defaultTheme';
 
 const config: Config = {
-  /** TailwindCSSがどこで使われる？ */
   content: [
     './src/components/**/*.{js,ts,jsx,tsx}',
     './src/app/**/*.{js,ts,jsx,tsx}',
@@ -10,7 +9,7 @@ const config: Config = {
   theme: {
     container: {
       center: true,
-      padding: '2rem', // おおよそ32px
+      padding: '2rem',
       screens: {
         '3xl': '1400px',
       },
@@ -51,6 +50,8 @@ const config: Config = {
       },
       width: {
         'custom-min': 'min(50%, 500px)',
+        content: 'var(--header-width)',
+        'content-pc': 'var(--header-width-pc)',
       },
       borderRadius: {
         lg: 'var(--radius)',

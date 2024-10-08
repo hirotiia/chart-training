@@ -11,8 +11,11 @@
   --forground-dark: #383c88;
 
   /** Viewport */
-  --viewport-max: 1220px;
+  --viewport-max: 1280px;
   --viewport-min: 330px;
+
+  --header-width: calc(100% - (var(--screen-margin-min) * 2));
+  --header-width-pc: calc(100% - (var(--screen-margin-max) * 2));
 
   /** margin */
   --screen-margin-max: 2.5rem;
