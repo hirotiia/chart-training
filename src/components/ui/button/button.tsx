@@ -20,12 +20,14 @@ const buttonVariants = cva(
 
         accent:
           'border border-accent bg-accent text-accent-foreground hover:border hover:border-accent hover:bg-white hover:text-accent',
+        login:
+          'border border-muted bg-white text-muted hover:border hover:border-muted hover:bg-muted hover:text-white',
       },
       size: {
         default: 'h-16 w-custom-button-width-lg px-8 py-4',
         sm: 'h-16 w-custom-button-width-sm px-8 py-4 text-lg',
         lg: 'h-20 w-full px-10 py-8 text-2xl',
-        icon: 'size-9',
+        icon: 'size-10',
       },
       rounded: {
         default: 'rounded-full',

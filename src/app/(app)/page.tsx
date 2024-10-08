@@ -20,14 +20,16 @@ const TopPage = () => {
       </p>
 
       <div className="mt-20 flex flex-col items-center justify-center gap-8 md:flex-row">
-        <Button size="sm" variant="secondary">
+        <Button as="a" href="/login" size="sm" variant="secondary">
           ログイン
         </Button>
 
         <p className="relative flex w-full items-center before:absolute before:left-0 before:right-[calc(50%+2rem)] before:top-1/2 before:h-0.5 before:bg-white before:content-[''] after:absolute after:left-[calc(50%+2rem)] after:right-0 after:top-1/2 after:h-0.5 after:bg-white after:content-[''] md:hidden">
           <b className="mx-auto">まずは</b>
         </p>
-        <Button size="sm">ゲームを始める</Button>
+        <Button as="a" href="/game" size="sm">
+          ゲームを始める
+        </Button>
       </div>
     </ContentLayout>
   );
