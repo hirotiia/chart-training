@@ -155,5 +155,5 @@ src
 <h2 id="heading-09">その他ドキュメント</h2>
 
 - [開発者向け情報](/developer.md)
-- [アプリケーションアーキテクチャ](/application-design.md)
+- [アプリケーションアーキテクチャ](/design-pattern.md)
 - [パフォーマンスを上げるための施策](/performance.md)
