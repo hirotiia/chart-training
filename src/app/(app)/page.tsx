@@ -8,7 +8,7 @@ import { config } from '@/config/config';
 const TopPage = () => {
   return (
     <ContentLayout title={config.APP_NAME}>
-      <TextLead className="mt-10 md:mt-14">
+      <TextLead>
         ”本物”のチャートで利益を競え！ <br />
         本格トレードシミュレーションアプリ
       </TextLead>
