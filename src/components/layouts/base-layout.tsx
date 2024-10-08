@@ -90,7 +90,7 @@ export const BaseLayout = ({ children }: { children: React.ReactNode }) => {
               </nav>
             </div>
           </header>
-          <main className="mt-40 md:mt-48">{children}</main>
+          <main>{children}</main>
           <footer className="py-8">
             <p className="text-right">
               <small>© Hrioya Nakano 2024</small>

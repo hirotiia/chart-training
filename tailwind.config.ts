@@ -43,15 +43,20 @@ const config: Config = {
           DEFAULT: 'var(--accent)',
           foreground: 'var(--accent-foreground)',
         },
+        accent2: {
+          DEFAULT: 'var(--accent-2)',
+        },
         card: {
           DEFAULT: 'var(--card)',
           foreground: 'var(--card-foreground)',
         },
       },
       width: {
-        'custom-min': 'min(50%, 500px)',
         content: 'var(--header-width)',
         'content-pc': 'var(--header-width-pc)',
+        'custom-button-width-lg': 'min(50%, 500px)',
+        'custom-button-width-sm':
+          'clamp(15.625rem, 14.668rem + 5.1vw, 18.75rem)',
       },
       borderRadius: {
         lg: 'var(--radius)',
