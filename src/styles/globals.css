@@ -10,6 +10,14 @@
   --foreground: #ffffff;
   --forground-dark: #383c88;
 
+  /** Viewport */
+  --viewport-max: 1220px;
+  --viewport-min: 330px;
+
+  /** gap */
+  --screen-gap-max: 2.5rem;
+  --screen-gap-min: 1rem;
+
   /* Gradients */
   --linear-gradient: linear-gradient(
     0deg,

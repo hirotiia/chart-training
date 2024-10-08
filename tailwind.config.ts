@@ -49,6 +49,9 @@ const config: Config = {
           foreground: 'var(--card-foreground)',
         },
       },
+      width: {
+        'custom-min': 'min(50%, 500px)',
+      },
       borderRadius: {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
@@ -77,6 +80,14 @@ const config: Config = {
       backgroundImage: {
         'gradient-custom': 'var(--linear-gradient)',
         'text-gradient': 'var(--text-gradient)',
+      },
+      gridTemplateColumns: {
+        'custom-layout':
+          '1fr minmax(var(--viewport-min), var(--viewport-max)) 1fr',
+      },
+      gap: {
+        'custom-gap':
+          '0 clamp(var(--screen-gap-min), 0.591rem + 2.182vw, var(--screen-gap-max))',
       },
     },
   },

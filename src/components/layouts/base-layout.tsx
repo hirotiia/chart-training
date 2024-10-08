@@ -38,62 +38,66 @@ export const BaseLayout = ({ children }: { children: React.ReactNode }) => {
   ].filter(Boolean);
 
   return (
-    <div className="grid min-h-screen-dvh grid-rows-[1fr_auto] gap-10">
-      <header className="fixed top-0 mt-6 w-full">
-        <div className="mx-auto flex max-w-screen-xl justify-between rounded-full bg-white/70 px-8 py-3 shadow-lg backdrop-blur-glass">
-          <div className="">
-            <Logo />
-          </div>
-          <button
-            className="my-auto flex size-8 flex-col items-center justify-center space-y-1.5 md:hidden"
-            type="button"
-            aria-expanded={isOpen ? true : false}
-            aria-controls="hamburger-menu"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            <SquareMenu
-              className={cn(
-                'absolute w-6 h-6 text-foregroundDark transition-transform',
-                isOpen ? 'opacity-0 rotate-45' : 'opacity-100 rotate-0',
-              )}
-            />
-            <X
-              className={cn(
-                'absolute w-6 h-6 text-foregroundDark transition-transform',
-                isOpen ? 'opacity-100 rotate-0' : 'opacity-0 rotate-45',
-              )}
-            />
-            <span className="sr-only">ナビゲーションメニュー</span>
-          </button>
-          <nav className="hidden md:block">
-            <ul className="flex h-full items-center gap-4">
-              {navigationList.map((item) => {
-                const isCurrent = pathname === item.to;
+    <div className="grid min-h-screen-dvh grid-cols-custom-layout gap-4">
+      <div className="col-span-3 grid grid-cols-custom-layout gap-custom-gap">
+        <div className="col-start-2 grid">
+          <header className="fixed left-0 top-0 mt-6 w-full">
+            <div className="mx-auto flex max-w-screen-xl justify-between rounded-full bg-white/70 px-8 py-3 shadow-lg backdrop-blur-glass">
+              <div className="">
+                <Logo />
+              </div>
+              <button
+                className="my-auto flex size-8 flex-col items-center justify-center space-y-1.5 md:hidden"
+                type="button"
+                aria-expanded={isOpen ? true : false}
+                aria-controls="hamburger-menu"
+                onClick={() => setIsOpen(!isOpen)}
+              >
+                <SquareMenu
+                  className={cn(
+                    'absolute w-6 h-6 text-foregroundDark transition-transform',
+                    isOpen ? 'opacity-0 rotate-45' : 'opacity-100 rotate-0',
+                  )}
+                />
+                <X
+                  className={cn(
+                    'absolute w-6 h-6 text-foregroundDark transition-transform',
+                    isOpen ? 'opacity-100 rotate-0' : 'opacity-0 rotate-45',
+                  )}
+                />
+                <span className="sr-only">ナビゲーションメニュー</span>
+              </button>
+              <nav className="hidden md:block">
+                <ul className="flex h-full items-center gap-4">
+                  {navigationList.map((item) => {
+                    const isCurrent = pathname === item.to;
 
-                return (
-                  <li className="" key={item.name}>
-                    <Link
-                      className={cn(
-                        'text-foregroundDark font-bold hover:text-muted transition-colors',
-                        isCurrent && 'text-muted',
-                      )}
-                      href={item.to}
-                    >
-                      {item.name}
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
-          </nav>
+                    return (
+                      <li className="" key={item.name}>
+                        <Link
+                          className={cn(
+                            'text-foregroundDark font-bold hover:text-muted transition-colors',
+                            isCurrent && 'text-muted',
+                          )}
+                          href={item.to}
+                        >
+                          {item.name}
+                        </Link>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </nav>
+            </div>
+          </header>
+          <main>{children}</main>
+          <footer>
+            <p className="text-right">
+              <small>© Hrioya Nakano 2024</small>
+            </p>
+          </footer>
         </div>
-      </header>
-      <main>{children}</main>
-      <footer>
-        <p className="text-right">
-          <small>© Hrioya Nakano 2024</small>
-        </p>
-      </footer>
+      </div>
     </div>
   );
 };
