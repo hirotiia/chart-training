@@ -12,7 +12,7 @@ const Logo = () => {
   return (
     <Link className="flex items-center gap-3" href="/">
       <Image
-        className="h-12 w-auto"
+        className="h-10 w-auto md:h-12"
         alt="チャートレアイコン"
         src="/logo.svg"
         width="80"
