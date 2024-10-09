@@ -55,13 +55,13 @@ export const BaseLayout = ({ children }: { children: React.ReactNode }) => {
               >
                 <SquareMenu
                   className={cn(
-                    'absolute w-6 h-6 text-foregroundDark transition-transform',
+                    'absolute w-6 h-6 text-foregroundDarkBlue transition-transform',
                     isOpen ? 'opacity-0 rotate-45' : 'opacity-100 rotate-0',
                   )}
                 />
                 <X
                   className={cn(
-                    'absolute w-6 h-6 text-foregroundDark transition-transform',
+                    'absolute w-6 h-6 text-foregroundDarkBlue transition-transform',
                     isOpen ? 'opacity-100 rotate-0' : 'opacity-0 rotate-45',
                   )}
                 />
@@ -76,7 +76,7 @@ export const BaseLayout = ({ children }: { children: React.ReactNode }) => {
                       <li className="" key={item.name}>
                         <Link
                           className={cn(
-                            'text-foregroundDark font-bold hover:text-muted transition-colors',
+                            'text-foregroundDarkBlue font-bold hover:text-muted transition-colors',
                             isCurrent && 'text-muted',
                           )}
                           href={item.to}

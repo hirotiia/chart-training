@@ -15,6 +15,13 @@ const EnvSchema = z.object({
 });
 
 const createEnv = () => {
+  console.log(`process.env.NODE_ENV:${process.env.NODE_ENV}`);
+  console.log(
+    `process.env.NEXT_PUBLIC_APP_URL:${process.env.NEXT_PUBLIC_APP_URL}`,
+  );
+  console.log(
+    `process.env.NEXT_PUBLIC_API_URL:${process.env.NEXT_PUBLIC_API_URL}`,
+  );
   const envVars = {
     NODE_ENV: process.env.NODE_ENV,
     APP_URL: process.env.NEXT_PUBLIC_APP_URL,

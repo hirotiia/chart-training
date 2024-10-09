@@ -23,6 +23,7 @@ const config: Config = {
         ring: 'var(--ring)', // フォーカスが当たっている要素の周り
         foreground: 'var(--foreground)',
         foregroundDark: 'var(--forground-dark)',
+        foregroundDarkBlue: 'var(--forground-dark-blue)',
         primary: {
           DEFAULT: 'var(--primary)',
           foreground: 'var(--primary-foreground)',

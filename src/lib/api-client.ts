@@ -42,7 +42,8 @@ async function fetchApi<T>(
     cache = 'no-store',
     next,
   } = options;
-  const fullUrl = buildUrlWithParams(`${env.API_URL}${url}`, params);
+  const fullUrl = buildUrlWithParams(`${env.APP_URL}${url}`, params);
+  console.log(`fullUrl: ${fullUrl}`);
 
   const response = await fetch(fullUrl, {
     method,

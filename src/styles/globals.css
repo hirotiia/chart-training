@@ -8,7 +8,8 @@
   --border: #ffffff;
   --ring: #010816;
   --foreground: #ffffff;
-  --forground-dark: #383c88;
+  --forground-dark: #222222;
+  --forground-dark-blue: #383c88;
 
   /** Viewport */
   --viewport-max: 1280px;
