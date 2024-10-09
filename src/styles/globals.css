@@ -14,15 +14,14 @@
   --viewport-max: 1280px;
   --viewport-min: 330px;
 
+  /** Header */
   --header-width: calc(100% - (var(--screen-margin-min) * 2));
   --header-width-pc: calc(100% - (var(--screen-margin-max) * 2));
 
-  /** margin */
+  /** Margin */
   --screen-margin-max: 2.5rem;
   --screen-margin-min: 1rem;
-
-  /** gap */
-  --screen-gap: 0
+  --screen-margin: 0
     clamp(
       var(--screen-margin-min),
       0.591rem + 2.182vw,
@@ -91,7 +90,6 @@ body {
 
 @layer utilities {
   .text-balance {
-    /* テキストのバランス調整 */
     text-wrap: balance;
   }
 }

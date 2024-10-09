@@ -54,7 +54,7 @@ const config: Config = {
       width: {
         content: 'var(--header-width)',
         'content-pc': 'var(--header-width-pc)',
-        'custom-button-width-lg': 'min(50%, 500px)',
+        'custom-button-width-lg': 'min(90%, 500px)',
         'custom-button-width-sm':
           'clamp(15.625rem, 14.668rem + 5.1vw, 18.75rem)',
       },
@@ -92,7 +92,7 @@ const config: Config = {
           '1fr minmax(var(--viewport-min), var(--viewport-max)) 1fr',
       },
       gap: {
-        'custom-gap': 'var(--screen-gap)',
+        'custom-gap': 'var(--screen-margin)',
       },
     },
   },
