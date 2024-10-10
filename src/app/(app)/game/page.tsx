@@ -21,7 +21,11 @@ const GamePage = () => {
       </TextLead>
       <div className="mt-10 grid gap-4 md:mt-14">
         {questions.map((question) => (
-          <QuestionView key={question.id} title={question.title} />
+          <QuestionView
+            key={question.id}
+            id={question.id}
+            title={question.title}
+          />
         ))}
       </div>
       <div className="mt-20 grid place-content-center">
