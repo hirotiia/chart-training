@@ -43,7 +43,7 @@ async function fetchApi<T>(
     next,
   } = options;
 
-  const fullUrl = buildUrlWithParams(`${env.APP_URL}${url}`, params);
+  const fullUrl = buildUrlWithParams(`${env.API_URL}${url}`, params);
   const response = await fetch(fullUrl, {
     method,
     headers: {

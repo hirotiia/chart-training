@@ -3,7 +3,7 @@ import { nanoid } from 'nanoid';
 import { ContentLayout } from '@/components/layouts/content-layout';
 import { Button } from '@/components/ui/button';
 import { TextLead } from '@/components/ui/text';
-import { QuestionView } from '@/features/questions/components/question-view';
+import { QuestionViews } from '@/features/questions/components/question-views';
 
 const GamePage = () => {
   const questions = [
@@ -21,7 +21,7 @@ const GamePage = () => {
       </TextLead>
       <div className="mt-10 grid gap-4 md:mt-14">
         {questions.map((question) => (
-          <QuestionView
+          <QuestionViews
             key={question.id}
             id={question.id}
             title={question.title}
