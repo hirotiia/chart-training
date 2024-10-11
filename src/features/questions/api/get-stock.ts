@@ -5,7 +5,7 @@ import 'dotenv/config';
 export const GetStock = async () => {
   const { from, to } = getRandomDateRange();
   console.log(from, to);
-  const requestUrl = `${process.env.NEXT_PUBLIC_API_URL}/symbol`;
+  const requestUrl = `/symbol`;
   console.log(requestUrl);
   console.log('API URL:', process.env.NEXT_PUBLIC_API_URL);
   console.log('API KEY:', process.env.FINNHUB_API_KEY);
@@ -13,6 +13,8 @@ export const GetStock = async () => {
   const response = await api.get<Response>(requestUrl, {
     params: { exchange: 'TSE', token: process.env.FINNHUB_API_KEY },
   });
+
+  console.log(`response: ${response}`);
 
   if (!response.ok) {
     console.error('リクエストエラー');

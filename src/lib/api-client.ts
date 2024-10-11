@@ -26,6 +26,7 @@ function buildUrlWithParams(
   const queryString = new URLSearchParams(
     filteredParams as Record<string, string>,
   ).toString();
+
   return `${url}?${queryString}`;
 }
 
@@ -44,6 +45,7 @@ async function fetchApi<T>(
   } = options;
 
   const fullUrl = buildUrlWithParams(`${env.API_URL}${url}`, params);
+  console.log(`fullUrl:${fullUrl}`);
   const response = await fetch(fullUrl, {
     method,
     headers: {
