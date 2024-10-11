@@ -10,11 +10,12 @@ type QuestionViewProps = {
 export const QuestionViews = async ({ id, title }: QuestionViewProps) => {
   /** クライアントキャッシュの確認、HTTPリクエストを送る */
   const data = await GetStock();
+  console.log(data);
 
   return (
     <Card title={title}>
       <p className="text-foregroundDark">{id}</p>
-      <p className="text-foregroundDark">{data}</p>
+      <p className="text-foregroundDark"></p>
     </Card>
   );
 };
